@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* White Theme Palette matching devakarmurugan.com */
+  --color-cream-bg: #FAF8F5;
+  --color-pure-white: #FFFFFF;
+  --color-border-warm: #E5E0D8;
+  --color-border-subtle: #EDE8E1;
+  --color-card-bg: #FFFFFF;
+  --color-card-hover: #FDFBF7;
+  
+  --color-gold: #F5B900;
+  --color-gold-hover: #FFC107;
+  --color-gold-soft: rgba(245, 185, 0, 0.12);
+  --color-gold-glow: rgba(245, 185, 0, 0.25);
+  --color-amber-accent: #D97706;
+
+  --color-text-dark: #111827;
+  --color-text-body: #4B5563;
+  --color-text-muted: #6B7280;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: #FAF8F5;
+  --color-foreground: #111827;
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FAF8F5;
+  color: #111827;
+  font-family: var(--font-geist-sans), 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Subtle dot backdrop for light theme */
+.light-grid-backdrop {
+  background-image: 
+    radial-gradient(rgba(17, 24, 39, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: #F5B900;
+  color: #111827;
+}
+
+/* Anchor offset */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* White Glass UI Elements */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 224, 216, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.glass-panel-subtle {
+  background: rgba(250, 248, 245, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 224, 216, 0.6);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+/* Subtle floating animations for floating badges */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-0.5deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-1 {
+  animation: float1 5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float2 6s ease-in-out infinite 0.8s;
+}
+
+.animate-float-3 {
+  animation: float3 7s ease-in-out infinite 1.5s;
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-thumb { background: #E5E0D8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #D97706; }
