@@ -11,32 +11,28 @@ interface FAQItem {
 
 const faqList: FAQItem[] = [
   {
-    q: 'What does a SaaS SEO expert actually do?',
-    a: 'A SaaS SEO expert grows a software product\'s organic traffic and signups through commercial landing pages, topical authority, technical SEO and AI Search optimization. You can see exactly how I do this in my case studies.',
+    q: 'What does an SEO and ads specialist actually do?',
+    a: 'I get your business found on Google and in AI search, and I run paid campaigns that bring in leads or orders. Everything is tracked, so you can see what is working.',
   },
   {
-    q: 'Do you only work with SaaS companies?',
-    a: 'No. While I specialize in SaaS SEO, I\'ve driven organic growth for eCommerce brands and local businesses too — from a healthcare store (Medingen) to local service businesses (RC Solars, Amit Services).',
-  },
-  {
-    q: 'What is Programmatic SEO and AI Search (GEO)?',
-    a: 'Programmatic SEO builds hundreds of high-quality pages from structured data, while AI Search Optimization (GEO) makes your brand discoverable inside ChatGPT, Claude, Gemini and Perplexity. I\'ve shipped 400+ programmatic pages and grown AI-driven traffic.',
+    q: 'Do you work with one type of business?',
+    a: 'My work is mostly e-commerce, commercial solar and local businesses. The approach is the same for all of them: find where customers search, fix what is blocking you, and measure revenue.',
   },
   {
     q: 'How long does SEO take to show results?',
-    a: 'Most projects see meaningful movement in 3–6 months and compounding growth after that. At BoldDesk I grew the blog to 20K monthly visitors within six months.',
+    a: 'Technical fixes can show within weeks. Rankings and revenue usually build over 3 to 6 months. Paid ads can bring leads within days but need a few weeks of tuning.',
   },
   {
-    q: 'How did you get into SEO?',
-    a: 'It started in my final year of engineering with a single website I built to understand Google. That curiosity became a career — read my full story in the About section.',
-  },
-  {
-    q: 'Can you handle both SEO and paid advertising?',
-    a: 'Absolutely. That dual capability is one of my strongest advantages. SEO builds long-term organic authority and lowers customer acquisition costs over time, while Meta and Google Ads deliver immediate high-intent traffic, rapid conversion data, and profitable sales.',
+    q: 'Can you handle SEO, ads, websites and video?',
+    a: 'Yes. SEO builds traffic that compounds, ads bring leads now, a fast WordPress site converts them, and AI video gives the ads fresh creative.',
   },
   {
     q: 'How do you measure success?',
-    a: 'Rankings and traffic are vanity metrics if they don’t generate revenue. I measure success by bottom-line business metrics: qualified inbound inquiries, qualified phone leads, e-commerce transactions, lower cost-per-lead (CPL), and return on ad spend (ROAS).',
+    a: 'By revenue and leads, not rankings alone. I use GA4, Search Console and Meta Ads Manager.',
+  },
+  {
+    q: 'How did you get into SEO?',
+    a: 'Through engineering. I wanted to know how to increase the value of what a business makes, and search turned out to be the most measurable way to do that.',
   },
 ];
 
@@ -73,7 +69,7 @@ export default function FAQSection() {
               <span className="text-[#FF5A36]">Questions.</span>
             </h2>
             <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-[#4B5563] font-normal">
-              What founders and marketing leaders usually ask before working with me.
+              What business owners usually ask before working with me.
             </p>
           </AnimateOnScroll>
         </div>

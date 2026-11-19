@@ -38,8 +38,8 @@ export default function FinalCTASection() {
             id="cta-heading"
             className="font-extrabold text-3xl xs:text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.12] tracking-tight text-[#111827]"
           >
-            I love talking SEO, AI Search and automation with{' '}
-            <span className="text-[#FF5A36]">marketers &amp; founders.</span>
+            Want more leads or orders from Google and Meta?{' '}
+            <span className="text-[#FF5A36]">Let&apos;s talk.</span>
           </h2>
         </AnimateOnScroll>
 
@@ -110,7 +110,7 @@ export default function FinalCTASection() {
         <AnimateOnScroll animation="fade-in" delay={260}>
           <div className="mt-14 sm:mt-16 pt-8 border-t border-gray-200/80 w-full">
             <p className="text-xs sm:text-sm font-mono tracking-wider text-[#6B7280] uppercase">
-              Still learning · Still building · Still growing
+              SEO · Meta Ads · Google Ads · WordPress · AI Video
             </p>
           </div>
         </AnimateOnScroll>

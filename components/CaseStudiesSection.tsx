@@ -182,11 +182,11 @@ export default function CaseStudiesSection() {
               id="work-heading"
               className="font-extrabold text-3xl xs:text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.12] tracking-tight text-[#111827]"
             >
-              Organic growth that turns into{' '}
-              <span className="text-[#FF5A36]">signups, leads &amp; sales.</span>
+              SEO and ad results from{' '}
+              <span className="text-[#FF5A36]">real businesses.</span>
             </h2>
             <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-[#4B5563] font-normal">
-              From enterprise SaaS to local businesses — every project engineered toward one thing: measurable revenue. Tap any card for the full breakdown.
+              From an online pharmacy to commercial solar to local venues. The numbers come from Search Console, GA4 and Meta Ads Manager.
             </p>
           </AnimateOnScroll>
         </div>

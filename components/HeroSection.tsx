@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import AnimateOnScroll from './AnimateOnScroll';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { FaLinkedinIn, FaInstagram, FaXTwitter, FaYoutube, FaStar } from 'react-icons/fa6';
+import { FaLinkedinIn, FaInstagram, FaStar } from 'react-icons/fa6';
 
 export default function HeroSection() {
   const handleScroll = (href: string) => {
@@ -123,24 +123,6 @@ export default function HeroSection() {
                       aria-label="Instagram"
                     >
                       <FaInstagram className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200/90 bg-white text-[#4B5563] hover:border-[#FF5A36] hover:text-[#FF5A36] hover:bg-orange-50/30 transition-all shadow-2xs hover:-translate-y-0.5"
-                      aria-label="X Twitter"
-                    >
-                      <FaXTwitter className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href="https://youtube.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200/90 bg-white text-[#4B5563] hover:border-[#FF5A36] hover:text-[#FF5A36] hover:bg-orange-50/30 transition-all shadow-2xs hover:-translate-y-0.5"
-                      aria-label="YouTube"
-                    >
-                      <FaYoutube className="w-4 h-4" />
                     </a>
                   </div>
                 </div>

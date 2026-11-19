@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://arul.digital/sitemap.xml',
+    sitemap: 'https://www.arulrajvadivel.online/sitemap.xml',
   };
 }

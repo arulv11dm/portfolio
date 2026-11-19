@@ -1,6 +1,6 @@
 'use client';
 
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa6';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa6';
 
 const footerNav = [
   { label: 'About', href: '#about' },
@@ -32,7 +32,7 @@ export default function FooterSection() {
               <span className="h-2 w-2 rounded-full bg-[#FF5A36]" />
             </div>
             <p className="text-xs sm:text-sm text-[#6B7280] font-medium tracking-wide">
-              SEO · Meta Ads · Google Ads · GEO · AI Search · Digital Growth
+              SEO · Meta Ads · Google Ads · WordPress · AI Video
             </p>
           </div>
 
@@ -72,15 +72,6 @@ export default function FooterSection() {
               aria-label="Instagram"
             >
               <FaInstagram className="w-4 h-4" />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white border border-gray-200/90 text-[#4B5563] hover:border-[#FF5A36] hover:text-[#FF5A36] shadow-2xs transition-colors"
-              aria-label="GitHub"
-            >
-              <FaGithub className="w-4 h-4" />
             </a>
           </div>
         </div>

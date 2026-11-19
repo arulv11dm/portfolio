@@ -11,6 +11,8 @@ import {
   Bot,
   BarChart3,
   TrendingUp,
+  Globe,
+  Video,
 } from 'lucide-react';
 
 interface ExpertiseItem {
@@ -21,13 +23,6 @@ interface ExpertiseItem {
 }
 
 const expertiseList: ExpertiseItem[] = [
-  {
-    id: 'saas-seo',
-    title: 'SaaS SEO',
-    description:
-      'Scaling B2B SaaS through commercial landing pages, topical authority, AI Search optimization and technical SEO.',
-    icon: <Search className="w-5 h-5 text-[#FF5A36]" />,
-  },
   {
     id: 'programmatic-seo',
     title: 'Programmatic SEO',
@@ -60,7 +55,7 @@ const expertiseList: ExpertiseItem[] = [
     id: 'link-building',
     title: 'Link Building',
     description:
-      'Authority-focused outreach, digital PR, guest posting and automation-driven SaaS backlink acquisition.',
+      'Authority-focused outreach, digital PR, guest posting and automation-driven backlink acquisition.',
     icon: <Link2 className="w-5 h-5 text-[#FF5A36]" />,
   },
   {
@@ -83,6 +78,20 @@ const expertiseList: ExpertiseItem[] = [
     description:
       'High-ROI performance marketing across Google Search, Shopping, and Meta Ads designed for profitable acquisition.',
     icon: <TrendingUp className="w-5 h-5 text-[#FF5A36]" />,
+  },
+  {
+    id: 'wordpress-development',
+    title: 'WordPress Development',
+    description:
+      'Fast, SEO-ready WordPress websites built with Elementor, with clean structure, Core Web Vitals, tracking and schema set up from day one.',
+    icon: <Globe className="w-5 h-5 text-[#FF5A36]" />,
+  },
+  {
+    id: 'ai-video-creation',
+    title: 'AI Video Creation',
+    description:
+      'AI-generated video ads and short-form content for Meta, Instagram and YouTube, made quickly and tested against real ad results.',
+    icon: <Video className="w-5 h-5 text-[#FF5A36]" />,
   },
 ];
 
@@ -109,8 +118,8 @@ export default function WhatIDoSection() {
               id="expertise-heading"
               className="font-extrabold text-3xl xs:text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.12] tracking-tight text-[#111827]"
             >
-              Technical SEO, automation, AI workflows and{' '}
-              <span className="text-[#FF5A36]">business-focused strategy.</span>
+              SEO, ads, websites and AI video, built around{' '}
+              <span className="text-[#FF5A36]">tracked results.</span>
             </h2>
             <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-[#4B5563] font-normal">
               From technical audits and search architecture to multi-channel paid funnels — scalable solutions built from engineering principles.

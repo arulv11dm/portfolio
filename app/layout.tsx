@@ -21,51 +21,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arulraj V | SEO Specialist & Digital Marketer",
+  title: "Arulraj V | SEO & Meta Ads Specialist",
   description:
-    "I make businesses more discoverable. Experienced in SEO, Meta Ads, Google Ads, GEO, AI Search, and Digital Growth.",
+    "SEO, Meta Ads, Google Ads, WordPress websites and AI video for e-commerce, commercial solar and local businesses. Technical SEO, paid ads and AI search.",
   keywords: [
     "Arulraj V",
     "Arulraj",
     "Arul",
     "SEO Specialist",
+    "Meta Ads Specialist",
     "Digital Marketer",
-    "Meta Ads",
     "Google Ads",
+    "WordPress Websites",
+    "AI Video",
     "GEO",
     "AI Search",
     "Digital Growth",
     "Technical SEO",
   ],
-  authors: [{ name: "Arulraj V", url: "https://arul.digital" }],
+  authors: [{ name: "Arulraj V", url: "https://www.arulrajvadivel.online/" }],
   creator: "Arulraj V",
   publisher: "Arulraj V",
-  metadataBase: new URL("https://arul.digital"),
+  metadataBase: new URL("https://www.arulrajvadivel.online"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.arulrajvadivel.online/",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://arul.digital",
-    siteName: "Arulraj V | SEO Specialist & Digital Marketer",
-    title: "Arulraj V | SEO Specialist & Digital Marketer",
+    url: "https://www.arulrajvadivel.online/",
+    siteName: "Arulraj V | SEO & Meta Ads Specialist",
+    title: "Arulraj V | SEO & Meta Ads Specialist",
     description:
-      "I make businesses more discoverable. Experienced in SEO, Meta Ads, Google Ads, GEO, AI Search, and Digital Growth.",
+      "SEO, Meta Ads, Google Ads, WordPress websites and AI video for e-commerce, commercial solar and local businesses. Technical SEO, paid ads and AI search.",
     images: [
       {
         url: "/portrait.jpg",
         width: 1200,
         height: 630,
-        alt: "Arulraj V — SEO Specialist & Digital Marketer",
+        alt: "Arulraj V — SEO & Meta Ads Specialist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arulraj V | SEO Specialist & Digital Marketer",
+    title: "Arulraj V | SEO & Meta Ads Specialist",
     description:
-      "I make businesses more discoverable. Experienced in SEO, Meta Ads, Google Ads, GEO, AI Search, and Digital Growth.",
+      "SEO, Meta Ads, Google Ads, WordPress websites and AI video for e-commerce, commercial solar and local businesses. Technical SEO, paid ads and AI search.",
     images: ["/portrait.jpg"],
   },
   robots: {
@@ -79,12 +81,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://arul.digital/#person",
+      "@id": "https://www.arulrajvadivel.online/#person",
       name: "Arulraj V",
-      jobTitle: "SEO Specialist & Digital Marketer",
+      jobTitle: "SEO & Meta Ads Specialist",
       description:
-        "An engineer who found his way into digital marketing. Focused on SEO, Meta Ads, Google Ads, GEO, AI, and Digital Growth.",
-      url: "https://arul.digital",
+        "SEO, Meta Ads, Google Ads, WordPress websites and AI video for e-commerce, commercial solar and local businesses. Technical SEO, paid ads and AI search.",
+      url: "https://www.arulrajvadivel.online/",
       email: "arulv11dm@gmail.com",
       telephone: "+91 89403 19984",
       sameAs: [
@@ -101,6 +103,8 @@ const jsonLd = {
         "Technical SEO",
         "Meta Ads",
         "Google Ads",
+        "WordPress Development",
+        "AI Video",
         "AI Search",
         "GEO",
         "Analytics",
@@ -109,10 +113,10 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://arul.digital/#website",
-      url: "https://arul.digital",
-      name: "Arulraj V | SEO Specialist & Digital Marketer",
-      publisher: { "@id": "https://arul.digital/#person" },
+      "@id": "https://www.arulrajvadivel.online/#website",
+      url: "https://www.arulrajvadivel.online/",
+      name: "Arulraj V | SEO & Meta Ads Specialist",
+      publisher: { "@id": "https://www.arulrajvadivel.online/#person" },
       inLanguage: "en-IN",
     },
   ],
