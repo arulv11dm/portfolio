@@ -163,53 +163,56 @@ export default function CaseStudiesSection() {
   return (
     <section
       id="portfolio"
-      className="scroll-mt-20 py-20 sm:py-28 bg-white border-t border-[#E5E0D8] relative overflow-hidden"
+      className="scroll-mt-20 py-16 sm:py-20 lg:py-24 bg-white border-t border-[#E5E0D8] relative overflow-hidden"
       aria-labelledby="work-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section Header (matching Devakar Murugan) */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <AnimateOnScroll animation="fade-in">
-            <div className="flex items-center gap-2.5">
-              <span className="h-px w-6 bg-[#D97706]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D97706]">
-                Case Studies
+            {/* Top Status Pill matching Hero/About style */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-gray-200/90 bg-[#F9FAFB] px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 shadow-2xs mb-4 sm:mb-5 w-fit">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#10B981] opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#10B981]" />
               </span>
+              <span>Case Studies</span>
             </div>
             <h2
               id="work-heading"
-              className="mt-4 font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#111827] tracking-tight leading-tight"
+              className="font-extrabold text-3xl xs:text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.12] tracking-tight text-[#111827]"
             >
-              Organic growth that turns into signups, leads &amp; sales.
+              Organic growth that turns into{' '}
+              <span className="text-[#FF5A36]">signups, leads &amp; sales.</span>
             </h2>
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#4B5563]">
+            <p className="mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed text-[#4B5563] font-normal">
               From enterprise SaaS to local businesses — every project engineered toward one thing: measurable revenue. Tap any card for the full breakdown.
             </p>
           </AnimateOnScroll>
         </div>
 
-        {/* 2-Column Grid of Cards (Devakar Layout) */}
+        {/* 2-Column Grid of Cards */}
         <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
           {caseStudies.map((study, index) => (
             <AnimateOnScroll key={study.id} animation="fade-in-up" delay={index * 80}>
               <div
                 onClick={() => setSelectedStudy(study)}
-                className="group flex h-full flex-col justify-between rounded-3xl border border-[#E5E0D8] bg-[#FAF8F5] p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#D97706]/50 hover:shadow-lg hover:shadow-black/5 hover:bg-white cursor-pointer"
+                className="group flex h-full flex-col justify-between rounded-3xl border border-gray-200/90 bg-[#FAF8F5] p-5 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#FF5A36]/40 hover:shadow-lg hover:shadow-black/5 hover:bg-white cursor-pointer"
               >
                 <div>
                   {/* Card Header: Icon + Title + Featured badge + Company/Year */}
                   <div className="flex items-center gap-3.5">
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#E5E0D8] bg-white text-[#D97706] font-bold text-lg font-mono shadow-xs">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-gray-200/90 bg-white text-[#FF5A36] font-bold text-lg font-mono shadow-xs group-hover:border-[#FF5A36]/40 transition-colors">
                       {study.name.charAt(0)}
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2">
-                        <h3 className="truncate font-extrabold text-lg sm:text-xl text-[#111827] group-hover:text-[#D97706] transition-colors">
+                        <h3 className="truncate font-extrabold text-lg sm:text-xl text-[#111827] group-hover:text-[#FF5A36] transition-colors">
                           {study.name}
                         </h3>
                         {study.isFeatured && (
-                          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#F5B900]/20 border border-[#F5B900]/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#B45309]">
-                            <Star className="w-2.5 h-2.5 fill-[#D97706] text-[#D97706]" />
+                          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#FFF5F2] border border-[#FF5A36]/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#FF5A36]">
+                            <Star className="w-2.5 h-2.5 fill-[#FF5A36] text-[#FF5A36]" />
                             Featured
                           </span>
                         )}
@@ -221,32 +224,32 @@ export default function CaseStudiesSection() {
                   </div>
 
                   {/* Card Description */}
-                  <p className="mt-4 text-sm leading-relaxed text-[#4B5563]">
+                  <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-[#4B5563]">
                     {study.description}
                   </p>
                 </div>
 
                 <div>
                   {/* 3-Column Metrics Pill Box */}
-                  <div className="mt-5 grid grid-cols-3 gap-2">
-                    <div className="rounded-xl border border-[#E5E0D8] bg-white px-2 py-2.5 text-center shadow-xs">
-                      <div className="font-extrabold text-sm sm:text-base leading-none text-[#D97706] font-mono">
+                  <div className="mt-6 grid grid-cols-3 gap-2">
+                    <div className="rounded-xl border border-gray-200/90 bg-white px-2 py-2.5 text-center shadow-2xs">
+                      <div className="font-extrabold text-sm sm:text-base leading-none text-[#FF5A36] font-mono">
                         {study.stat1.value}
                       </div>
                       <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#6B7280]">
                         {study.stat1.label}
                       </div>
                     </div>
-                    <div className="rounded-xl border border-[#E5E0D8] bg-white px-2 py-2.5 text-center shadow-xs">
-                      <div className="font-extrabold text-sm sm:text-base leading-none text-[#D97706] font-mono">
+                    <div className="rounded-xl border border-gray-200/90 bg-white px-2 py-2.5 text-center shadow-2xs">
+                      <div className="font-extrabold text-sm sm:text-base leading-none text-[#111827] font-mono">
                         {study.stat2.value}
                       </div>
                       <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#6B7280]">
                         {study.stat2.label}
                       </div>
                     </div>
-                    <div className="rounded-xl border border-[#E5E0D8] bg-white px-2 py-2.5 text-center shadow-xs">
-                      <div className="font-extrabold text-sm sm:text-base leading-none text-[#D97706] font-mono">
+                    <div className="rounded-xl border border-gray-200/90 bg-white px-2 py-2.5 text-center shadow-2xs">
+                      <div className="font-extrabold text-sm sm:text-base leading-none text-[#FF5A36] font-mono">
                         {study.stat3.value}
                       </div>
                       <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#6B7280]">
@@ -256,7 +259,7 @@ export default function CaseStudiesSection() {
                   </div>
 
                   {/* View Case Study Link */}
-                  <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-[#D97706] group-hover:text-[#B45309] transition-colors">
+                  <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-[#FF5A36] group-hover:text-[#E84E2C] transition-colors">
                     View case study
                     <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
@@ -274,13 +277,13 @@ export default function CaseStudiesSection() {
           onClick={() => setSelectedStudy(null)}
         >
           <div
-            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl border border-[#E5E0D8] bg-white p-6 sm:p-8 shadow-2xl text-[#111827]"
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gray-200 bg-white p-6 sm:p-8 shadow-2xl text-[#111827]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedStudy(null)}
-              className="absolute top-5 right-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#FAF8F5] border border-[#E5E0D8] text-[#6B7280] hover:text-[#111827] hover:border-[#D97706] transition-colors"
+              className="absolute top-5 right-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#FAF8F5] border border-gray-200 text-[#6B7280] hover:text-[#111827] hover:border-[#FF5A36] transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -288,11 +291,11 @@ export default function CaseStudiesSection() {
             {/* Modal Header */}
             <div className="pr-12">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D97706]">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#FF5A36]">
                   {selectedStudy.company} · {selectedStudy.year}
                 </span>
                 {selectedStudy.isFeatured && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-[#F5B900]/20 border border-[#F5B900]/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#B45309]">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-[#FFF5F2] border border-[#FF5A36]/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#FF5A36]">
                     ★ Featured
                   </span>
                 )}
@@ -307,20 +310,20 @@ export default function CaseStudiesSection() {
 
             {/* Metrics */}
             <div className="mt-6 grid grid-cols-3 gap-3">
-              <div className="rounded-2xl border border-[#E5E0D8] bg-[#FAF8F5] p-4 text-center">
-                <div className="text-xl sm:text-2xl font-extrabold text-[#D97706] font-mono">
+              <div className="rounded-2xl border border-gray-200/90 bg-[#FAF8F5] p-4 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-[#FF5A36] font-mono">
                   {selectedStudy.stat1.value}
                 </div>
                 <div className="text-xs text-[#6B7280] mt-1">{selectedStudy.stat1.label}</div>
               </div>
-              <div className="rounded-2xl border border-[#E5E0D8] bg-[#FAF8F5] p-4 text-center">
-                <div className="text-xl sm:text-2xl font-extrabold text-[#D97706] font-mono">
+              <div className="rounded-2xl border border-gray-200/90 bg-[#FAF8F5] p-4 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-[#111827] font-mono">
                   {selectedStudy.stat2.value}
                 </div>
                 <div className="text-xs text-[#6B7280] mt-1">{selectedStudy.stat2.label}</div>
               </div>
-              <div className="rounded-2xl border border-[#E5E0D8] bg-[#FAF8F5] p-4 text-center">
-                <div className="text-xl sm:text-2xl font-extrabold text-[#D97706] font-mono">
+              <div className="rounded-2xl border border-gray-200/90 bg-[#FAF8F5] p-4 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-[#FF5A36] font-mono">
                   {selectedStudy.stat3.value}
                 </div>
                 <div className="text-xs text-[#6B7280] mt-1">{selectedStudy.stat3.label}</div>
@@ -331,20 +334,20 @@ export default function CaseStudiesSection() {
             <div className="mt-8 space-y-6 text-sm text-[#4B5563] leading-relaxed">
               <div>
                 <h4 className="font-bold text-xs uppercase tracking-widest text-[#111827] mb-2 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#EA4335]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36]" />
                   The Challenge
                 </h4>
-                <p className="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-4 text-[#374151]">
+                <p className="bg-[#FAF8F5] border border-gray-200/90 rounded-2xl p-4 text-[#374151]">
                   {selectedStudy.challenge}
                 </p>
               </div>
 
               <div>
                 <h4 className="font-bold text-xs uppercase tracking-widest text-[#111827] mb-2 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D97706]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36]" />
                   The Thinking &amp; Strategy
                 </h4>
-                <div className="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-4 space-y-3 text-[#374151]">
+                <div className="bg-[#FAF8F5] border border-gray-200/90 rounded-2xl p-4 space-y-3 text-[#374151]">
                   <p>{selectedStudy.thinking}</p>
                   <p>{selectedStudy.strategy}</p>
                 </div>
@@ -355,28 +358,28 @@ export default function CaseStudiesSection() {
                   <span className="w-1.5 h-1.5 rounded-full bg-[#246FEA]" />
                   Execution
                 </h4>
-                <p className="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-4 text-[#374151]">
+                <p className="bg-[#FAF8F5] border border-gray-200/90 rounded-2xl p-4 text-[#374151]">
                   {selectedStudy.execution}
                 </p>
               </div>
 
               <div>
                 <h4 className="font-bold text-xs uppercase tracking-widest text-[#111827] mb-2 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#10A37F]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
                   The Outcome &amp; Revenue Growth
                 </h4>
-                <p className="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-4 text-[#111827] font-semibold">
+                <p className="bg-[#FAF8F5] border border-gray-200/90 rounded-2xl p-4 text-[#111827] font-semibold">
                   {selectedStudy.outcome}
                 </p>
               </div>
             </div>
 
             {/* Tags */}
-            <div className="mt-8 flex flex-wrap gap-2 pt-4 border-t border-[#E5E0D8]">
+            <div className="mt-8 flex flex-wrap gap-2 pt-4 border-t border-gray-200/90">
               {selectedStudy.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="rounded-full bg-[#FAF8F5] border border-[#E5E0D8] px-3 py-1 text-xs font-semibold text-[#4B5563]"
+                  className="rounded-full bg-[#FAF8F5] border border-gray-200/90 px-3 py-1 text-xs font-semibold text-[#4B5563]"
                 >
                   {tag}
                 </span>

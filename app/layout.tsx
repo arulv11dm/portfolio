@@ -1,6 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,10 +21,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arul | SEO Specialist & Digital Marketer",
+  title: "Arulraj V | SEO Specialist & Digital Marketer",
   description:
     "I make businesses more discoverable. Experienced in SEO, Meta Ads, Google Ads, GEO, AI Search, and Digital Growth.",
   keywords: [
+    "Arulraj V",
+    "Arulraj",
     "Arul",
     "SEO Specialist",
     "Digital Marketer",
@@ -29,9 +37,9 @@ export const metadata: Metadata = {
     "Digital Growth",
     "Technical SEO",
   ],
-  authors: [{ name: "Arul", url: "https://arul.digital" }],
-  creator: "Arul",
-  publisher: "Arul",
+  authors: [{ name: "Arulraj V", url: "https://arul.digital" }],
+  creator: "Arulraj V",
+  publisher: "Arulraj V",
   metadataBase: new URL("https://arul.digital"),
   alternates: {
     canonical: "/",
@@ -40,8 +48,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://arul.digital",
-    siteName: "Arul | SEO Specialist & Digital Marketer",
-    title: "Arul | SEO Specialist & Digital Marketer",
+    siteName: "Arulraj V | SEO Specialist & Digital Marketer",
+    title: "Arulraj V | SEO Specialist & Digital Marketer",
     description:
       "I make businesses more discoverable. Experienced in SEO, Meta Ads, Google Ads, GEO, AI Search, and Digital Growth.",
     images: [
@@ -49,13 +57,13 @@ export const metadata: Metadata = {
         url: "/portrait.jpg",
         width: 1200,
         height: 630,
-        alt: "Arul — SEO Specialist & Digital Marketer",
+        alt: "Arulraj V — SEO Specialist & Digital Marketer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arul | SEO Specialist & Digital Marketer",
+    title: "Arulraj V | SEO Specialist & Digital Marketer",
     description:
       "I make businesses more discoverable. Experienced in SEO, Meta Ads, Google Ads, GEO, AI Search, and Digital Growth.",
     images: ["/portrait.jpg"],
@@ -72,12 +80,17 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": "https://arul.digital/#person",
-      name: "Arul",
+      name: "Arulraj V",
       jobTitle: "SEO Specialist & Digital Marketer",
       description:
         "An engineer who found his way into digital marketing. Focused on SEO, Meta Ads, Google Ads, GEO, AI, and Digital Growth.",
       url: "https://arul.digital",
       email: "arulv11dm@gmail.com",
+      telephone: "+91 89403 19984",
+      sameAs: [
+        "https://www.linkedin.com/in/arulraj-v11/",
+        "https://www.instagram.com/arulrajav"
+      ],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Chennai",
@@ -98,7 +111,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://arul.digital/#website",
       url: "https://arul.digital",
-      name: "Arul | SEO Specialist & Digital Marketer",
+      name: "Arulraj V | SEO Specialist & Digital Marketer",
       publisher: { "@id": "https://arul.digital/#person" },
       inLanguage: "en-IN",
     },

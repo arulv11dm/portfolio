@@ -36,22 +36,27 @@ export default function ToolsSection() {
   return (
     <section
       id="tools"
-      className="scroll-mt-20 py-20 sm:py-28 bg-white border-t border-[#E5E0D8] overflow-hidden"
+      className="scroll-mt-20 py-16 sm:py-20 lg:py-24 bg-white border-t border-[#E5E0D8] overflow-hidden"
       aria-labelledby="tools-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-12">
         <AnimateOnScroll animation="fade-in">
-          <div className="text-center max-w-2xl mx-auto">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#D97706]">
-              STACK &amp; PLATFORMS
-            </span>
+          <div className="text-center max-w-2xl mx-auto flex flex-col items-center">
+            {/* Top Status Pill */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-gray-200/90 bg-[#F9FAFB] px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 shadow-2xs mb-4 sm:mb-5 w-fit">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#10B981] opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#10B981]" />
+              </span>
+              <span>Stack &amp; Platforms</span>
+            </div>
             <h2
               id="tools-heading"
-              className="mt-3 font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#111827] tracking-tight"
+              className="font-extrabold text-3xl xs:text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.12] tracking-tight text-[#111827]"
             >
-              Tools I Work With
+              Tools I <span className="text-[#FF5A36]">Work With.</span>
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-[#4B5563]">
+            <p className="mt-4 sm:mt-5 text-base sm:text-lg text-[#4B5563] leading-relaxed font-normal">
               Industry-standard platforms, analytics suites, and AI engines integrated seamlessly into my daily workflow.
             </p>
           </div>
@@ -60,16 +65,16 @@ export default function ToolsSection() {
 
       {/* Row 1: Forward Marquee */}
       <div className="marquee-mask group overflow-hidden py-3">
-        <div className="flex w-max items-center animate-marquee group-hover:[animation-play-state:paused] gap-5 sm:gap-6">
+        <div className="flex w-max items-center animate-marquee [animation-duration:35s] group-hover:[animation-play-state:paused] gap-4 sm:gap-6">
           {[...tools, ...tools].map((tool, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] shadow-xs transition-all duration-300 hover:border-[#D97706]/50 hover:bg-white hover:shadow-sm shrink-0 group/item cursor-default"
+              className="flex items-center gap-3 px-5 sm:px-6 py-3 rounded-2xl bg-[#FAF8F5] border border-gray-200/90 shadow-2xs transition-all duration-300 hover:border-[#FF5A36]/40 hover:bg-white hover:shadow-md shrink-0 group/item cursor-default"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-white border border-[#E5E0D8] group-hover/item:border-[#D97706]/30 shadow-2xs transition-colors">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-white border border-gray-200/90 group-hover/item:border-[#FF5A36]/30 shadow-2xs transition-colors">
                 {tool.icon}
               </div>
-              <span className="font-bold text-sm tracking-wide text-[#111827] group-hover/item:text-[#D97706] transition-colors">
+              <span className="font-bold text-sm tracking-wide text-[#111827] group-hover/item:text-[#FF5A36] transition-colors">
                 {tool.name}
               </span>
             </div>

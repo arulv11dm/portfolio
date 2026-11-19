@@ -4,7 +4,6 @@ import ClientMarquee from '@/components/ClientMarquee';
 import AboutSection from '@/components/AboutSection';
 import CaseStudiesSection from '@/components/CaseStudiesSection';
 import WhatIDoSection from '@/components/WhatIDoSection';
-import SkillsSection from '@/components/SkillsSection';
 import ProofOfWorkSection from '@/components/ProofOfWorkSection';
 import ToolsSection from '@/components/ToolsSection';
 import FAQSection from '@/components/FAQSection';
@@ -13,7 +12,7 @@ import FooterSection from '@/components/FooterSection';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAF8F5] text-[#111827] selection:bg-[#F5B900] selection:text-[#111827]">
+    <div className="flex flex-col min-h-screen bg-[#FAF8F5] text-[#111827] selection:bg-[#FF5A36] selection:text-white overflow-x-clip w-full max-w-full">
       {/* Sticky Navigation */}
       <Navbar />
 
@@ -33,23 +32,20 @@ export default function Home() {
         {/* 5. What I Do */}
         <WhatIDoSection />
 
-        {/* 6. Skills & Capabilities */}
-        <SkillsSection />
-
-        {/* 7. Proof of Work */}
+        {/* 6. Proof of Work */}
         <ProofOfWorkSection />
 
-        {/* 8. Tools & Technology */}
+        {/* 7. Tools & Technology */}
         <ToolsSection />
 
-        {/* 9. FAQ */}
+        {/* 8. FAQ */}
         <FAQSection />
 
-        {/* 10. Final CTA */}
+        {/* 9. Final CTA */}
         <FinalCTASection />
       </main>
 
-      {/* 11. Footer */}
+      {/* 10. Footer */}
       <FooterSection />
     </div>
   );
